@@ -1,0 +1,245 @@
+python3 benchmark.py --model=efficientnet_b3_ns --dataset=cifar100 --train_batch_size=10 --test_batch_size=10 --epochs=100
+
+2025-06-20 15:32:22.320765: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1750426342.333696 1781778 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1750426342.337461 1781778 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1750426342.347957 1781778 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1750426342.347976 1781778 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1750426342.347979 1781778 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1750426342.347981 1781778 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+ERROR:absl:Oryx not found! This library will still work but no summarywill be logged.
+Using: [CudaDevice(id=0)]
+I0000 00:00:1750426349.837045 1781778 gpu_device.cc:2019] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 4214 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 3090, pci bus id: 0000:01:00.0, compute capability: 8.6
+2025-06-20 15:33:06.506372: W external/local_xla/xla/tsl/platform/cloud/google_auth_provider.cc:184] All attempts to get a Google authentication bearer token failed, returning an empty token. Retrieving token from files failed with "NOT_FOUND: Could not locate the credentials file.". Retrieving token from GCE failed with "FAILED_PRECONDITION: Error executing an HTTP request: libcurl code 6 meaning 'Could not resolve hostname', error details: Could not resolve host: metadata.google.internal".
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/Adam.learning_rate = 0.0003
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/build_gradient_estimators.gradient_estimator_fn = @FullESOrPMAP
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/build_gradient_estimators.sample_task_family_fn = @april28_distribution_bigger
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/FullES.loss_type = 'last_recompute'
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/FullES.recompute_samples = 100
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/FullES.sign_delta_loss_scalar = 1.0
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/FullES.truncation_schedule = @LogUniformLengthSchedule()
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/gradient_worker_compute.extra_metrics = False
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/GradientAccumulator.num_average = 20
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/GradientAccumulator.opt = @Adam()
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/GradientClipOptimizer.opt = @GradientAccumulator()
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/GradientLearner.init_theta_from_path =     'jul18_continue_on_bigger_2xbs_morestale_9264/params'
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/GradientLearner.meta_init = @HyperV2()
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/GradientLearner.reset_outer_iteration = True
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/GradientLearner.theta_opt = @GradientClipOptimizer()
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/HyperV2.lstm_hidden_size = 512
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/HyperV2.param_inits = 256
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/HyperV2.use_bugged_loss_features = False
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/LogUniformLengthSchedule.max_length = 200000
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/LogUniformLengthSchedule.min_length = 200
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/periodically_save_checkpoint.time_interval = 60
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/PMAPFullES.truncation_schedule = @LogUniformLengthSchedule()
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/run_train.lopt = @HyperV2()
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/run_train.num_estimators = 8
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/run_train.num_steps = 100000
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/run_train.outer_learner_fn = @GradientLearner
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/run_train.run_num_estimators_per_gradient = 1
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/run_train.staleness = 500
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/run_train.stochastic_resample_frequency = 200
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/run_train.summary_every_n = 25
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/run_train.trainer_batch_size = 512
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/VectorizedLOptTruncatedStep.num_tasks = 8
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/VectorizedLOptTruncatedStep.random_initial_iteration_offset = 0
+opt_from_checkpoint__19152eaf_d5b8_45b6_8501_f5cf443e80d1/VectorizedLOptTruncatedStep.trunc_sched = @NeverEndingTruncationSchedule()
+/nhome/siniac/rcheam/Bureau/stage/learned_optimization/learned_optimization/optimizers/gradient_accumulator.py:80: UserWarning: Explicitly requested dtype <class 'jax.numpy.int64'> requested in asarray is not available, and will be truncated to dtype int32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/jax-ml/jax#current-gotchas for more.
+  iteration=jnp.asarray(0, dtype=jnp.int64))
+E0620 15:34:12.558360 1781778 hlo_lexer.cc:444] Failed to parse int literal: 90862969956859201869134585
+E0620 15:34:12.558395 1781778 hlo_lexer.cc:444] Failed to parse int literal: 90862969956859201869134585
+2025-06-20 15:34:14.329251: E external/xla/xla/stream_executor/cuda/cuda_timer.cc:86] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+2025-06-20 15:34:14.477752: E external/xla/xla/stream_executor/cuda/cuda_timer.cc:86] Delay kernel timed out: measured time has sub-optimal accuracy. There may be a missing warmup execution, please investigate in Nsight Systems.
+
+number of parameters for efficientnet_b3_ns: 10849932
+
+Training 500000 steps over 100 epochs
+Epochs:   0%|                                                      | 0/100 [00:00<?, ?it/s2025-06-20 15:40:39.708327: E external/xla/xla/service/slow_operation_alarm.cc:73] ?, ?it/s]
+********************************
+[Compiling module jit__unnamed_wrapped_function_] Very slow compile? If you want to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+********************************
+2025-06-20 15:45:34.632276: E external/xla/xla/service/slow_operation_alarm.cc:140] The operation took 6m54.924039331s
+
+********************************
+[Compiling module jit__unnamed_wrapped_function_] Very slow compile? If you want to file a bug, run with envvar XLA_FLAGS=--xla_dump_to=/tmp/foo and attach the results.
+********************************
+[Epoch 1] Train acc: 0.087, loss: 3.914 | Test acc: 0.087, loss: 3.931 | Time: 1642.07s    
+[Epoch 2] Train acc: 0.162, loss: 3.475 | Test acc: 0.159, loss: 3.509 | Time: 344.57s     
+[Epoch 3] Train acc: 0.234, loss: 3.056 | Test acc: 0.232, loss: 3.104 | Time: 346.30s     
+[Epoch 4] Train acc: 0.297, loss: 2.721 | Test acc: 0.281, loss: 2.802 | Time: 348.79s     
+[Epoch 5] Train acc: 0.350, loss: nan | Test acc: 0.332, loss: nan | Time: 347.42s         
+[Epoch 6] Train acc: 0.406, loss: nan | Test acc: 0.377, loss: 2.362 | Time: 343.91s       
+[Epoch 7] Train acc: 0.447, loss: 2.037 | Test acc: 0.408, loss: 2.231 | Time: 351.91s     
+[Epoch 8] Train acc: 0.485, loss: nan | Test acc: 0.432, loss: 2.125 | Time: 340.47s       
+[Epoch 9] Train acc: 0.513, loss: nan | Test acc: 0.447, loss: 2.085 | Time: 354.16s       
+[Epoch 10] Train acc: 0.531, loss: nan | Test acc: 0.452, loss: 2.106 | Time: 353.23s      
+[Epoch 11] Train acc: 0.566, loss: 1.566 | Test acc: 0.461, loss: 2.098 | Time: 354.01s    
+[Epoch 12] Train acc: 0.582, loss: 1.518 | Test acc: 0.465, loss: 2.161 | Time: 343.19s    
+[Epoch 13] Train acc: 0.596, loss: 1.466 | Test acc: 0.468, loss: 2.208 | Time: 340.58s    
+[Epoch 14] Train acc: 0.607, loss: 1.446 | Test acc: 0.470, loss: 2.306 | Time: 351.26s    
+[Epoch 15] Train acc: 0.634, loss: 1.339 | Test acc: 0.474, loss: 2.358 | Time: 340.67s    
+[Epoch 16] Train acc: 0.647, loss: 1.288 | Test acc: 0.480, loss: 2.396 | Time: 352.05s    
+[Epoch 17] Train acc: 0.668, loss: 1.200 | Test acc: 0.474, loss: 2.462 | Time: 360.84s    
+[Epoch 18] Train acc: 0.676, loss: 1.177 | Test acc: 0.476, loss: 2.536 | Time: 350.21s    
+[Epoch 19] Train acc: 0.668, loss: 1.251 | Test acc: 0.472, loss: 2.666 | Time: 343.02s    
+[Epoch 20] Train acc: 0.672, loss: 1.267 | Test acc: 0.464, loss: 2.811 | Time: 343.18s    
+[Epoch 21] Train acc: 0.689, loss: 1.182 | Test acc: 0.471, loss: 2.778 | Time: 343.00s    
+[Epoch 22] Train acc: 0.692, loss: 1.159 | Test acc: 0.475, loss: 2.793 | Time: 343.02s    
+[Epoch 23] Train acc: 0.706, loss: 1.108 | Test acc: 0.474, loss: 2.861 | Time: 339.75s    
+Epochs:  22%|████████▊                               | 22/100 [2:42:43<7:55:58, 366.13s/it]
+Early stopping triggered at epoch 23. Best epoch was 16
+Epochs:  22%|████████▊                               | 22/100 [2:42:43<9:36:56, 443.80s/it]
+Total training time: 9763.70s
+Checkpoint is written to results/checkpoints/cifar100/velo_efficientnet_b3_ns_cifar100_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for efficientnet_b3_ns: 10849932
+
+Training 500000 steps over 100 epochs
+[Epoch 1] Train acc: 0.170, loss: 4.636 | Test acc: 0.163, loss: 4.628 | Time: 181.70s     
+[Epoch 2] Train acc: 0.311, loss: 2.733 | Test acc: 0.288, loss: 2.904 | Time: 98.05s      
+[Epoch 3] Train acc: 0.414, loss: 2.219 | Test acc: 0.353, loss: 2.556 | Time: 101.54s     
+[Epoch 4] Train acc: 0.475, loss: 1.995 | Test acc: 0.384, loss: 2.550 | Time: 103.07s     
+[Epoch 5] Train acc: 0.492, loss: 2.027 | Test acc: 0.377, loss: 2.832 | Time: 101.48s     
+[Epoch 6] Train acc: 0.506, loss: 2.063 | Test acc: 0.372, loss: 3.155 | Time: 103.69s     
+[Epoch 7] Train acc: 0.520, loss: 2.112 | Test acc: 0.368, loss: 3.463 | Time: 101.87s     
+[Epoch 8] Train acc: 0.549, loss: 2.044 | Test acc: 0.375, loss: 3.706 | Time: 101.76s     
+[Epoch 9] Train acc: 0.593, loss: 1.814 | Test acc: 0.393, loss: 3.698 | Time: 102.26s     
+[Epoch 10] Train acc: 0.622, loss: 1.689 | Test acc: 0.402, loss: 3.812 | Time: 102.77s    
+[Epoch 11] Train acc: 0.674, loss: 1.425 | Test acc: 0.418, loss: 3.787 | Time: 102.21s    
+[Epoch 12] Train acc: 0.716, loss: 1.198 | Test acc: 0.430, loss: 3.814 | Time: 101.91s    
+[Epoch 13] Train acc: 0.745, loss: 1.083 | Test acc: 0.439, loss: 3.878 | Time: 101.50s    
+[Epoch 14] Train acc: 0.758, loss: 1.019 | Test acc: 0.442, loss: 3.959 | Time: 101.79s    
+[Epoch 15] Train acc: 0.802, loss: 0.806 | Test acc: 0.455, loss: 3.896 | Time: 101.88s    
+[Epoch 16] Train acc: 0.833, loss: 0.663 | Test acc: 0.471, loss: 3.854 | Time: 101.86s    
+[Epoch 17] Train acc: 0.858, loss: 0.553 | Test acc: 0.480, loss: 3.866 | Time: 102.37s    
+[Epoch 18] Train acc: 0.893, loss: 0.403 | Test acc: 0.492, loss: 3.782 | Time: 102.06s    
+[Epoch 19] Train acc: 0.927, loss: 0.258 | Test acc: 0.502, loss: 3.671 | Time: 102.28s    
+[Epoch 20] Train acc: 0.935, loss: 0.227 | Test acc: 0.509, loss: 3.660 | Time: 101.69s    
+[Epoch 21] Train acc: 0.936, loss: 0.220 | Test acc: 0.509, loss: 3.670 | Time: 101.72s    
+[Epoch 22] Train acc: 0.937, loss: 0.217 | Test acc: 0.510, loss: 3.680 | Time: 102.54s    
+[Epoch 23] Train acc: 0.938, loss: 0.214 | Test acc: 0.510, loss: 3.690 | Time: 102.06s    
+[Epoch 24] Train acc: 0.939, loss: 0.211 | Test acc: 0.510, loss: 3.698 | Time: 101.62s    
+[Epoch 25] Train acc: 0.940, loss: 0.209 | Test acc: 0.510, loss: 3.707 | Time: 101.98s    
+[Epoch 26] Train acc: 0.940, loss: 0.207 | Test acc: 0.510, loss: 3.714 | Time: 101.85s    
+[Epoch 27] Train acc: 0.941, loss: 0.206 | Test acc: 0.510, loss: 3.720 | Time: 102.75s    
+[Epoch 28] Train acc: 0.941, loss: 0.205 | Test acc: 0.510, loss: 3.727 | Time: 101.65s    
+[Epoch 29] Train acc: 0.942, loss: 0.203 | Test acc: 0.511, loss: 3.733 | Time: 101.50s    
+[Epoch 30] Train acc: 0.942, loss: 0.202 | Test acc: 0.511, loss: 3.738 | Time: 101.60s    
+[Epoch 31] Train acc: 0.943, loss: 0.201 | Test acc: 0.511, loss: 3.744 | Time: 101.78s    
+[Epoch 32] Train acc: 0.943, loss: 0.200 | Test acc: 0.511, loss: 3.748 | Time: 102.60s    
+[Epoch 33] Train acc: 0.943, loss: 0.199 | Test acc: 0.510, loss: 3.753 | Time: 101.92s    
+[Epoch 34] Train acc: 0.944, loss: 0.198 | Test acc: 0.510, loss: 3.757 | Time: 101.57s    
+[Epoch 35] Train acc: 0.944, loss: 0.198 | Test acc: 0.510, loss: 3.761 | Time: 101.43s    
+[Epoch 36] Train acc: 0.944, loss: 0.197 | Test acc: 0.510, loss: 3.765 | Time: 101.55s    
+Epochs:  35%|██████████████                          | 35/100 [1:15:15<2:13:09, 122.91s/it]
+Early stopping triggered at epoch 36. Best epoch was 29
+Epochs:  35%|██████████████                          | 35/100 [1:15:15<2:19:46, 129.02s/it]
+Total training time: 4515.64s
+Checkpoint is written to results/checkpoints/cifar100/sgd_efficientnet_b3_ns_cifar100_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for efficientnet_b3_ns: 10849932
+
+Training 500000 steps over 100 epochs
+[Epoch 1] Train acc: 0.095, loss: 4.192 | Test acc: 0.095, loss: 4.181 | Time: 197.35s     
+[Epoch 2] Train acc: 0.190, loss: 3.339 | Test acc: 0.179, loss: 3.379 | Time: 115.14s     
+[Epoch 3] Train acc: 0.267, loss: 3.006 | Test acc: 0.251, loss: 3.107 | Time: 120.69s     
+[Epoch 4] Train acc: 0.356, loss: 2.473 | Test acc: 0.321, loss: 2.696 | Time: 120.80s     
+[Epoch 5] Train acc: 0.421, loss: 2.178 | Test acc: 0.360, loss: 2.553 | Time: 120.25s     
+[Epoch 6] Train acc: 0.458, loss: 2.041 | Test acc: 0.373, loss: 2.587 | Time: 122.16s     
+[Epoch 7] Train acc: 0.476, loss: 2.226 | Test acc: 0.372, loss: 2.996 | Time: 121.76s     
+[Epoch 8] Train acc: 0.501, loss: 2.139 | Test acc: 0.372, loss: 3.069 | Time: 121.51s     
+[Epoch 9] Train acc: 0.547, loss: 1.914 | Test acc: 0.394, loss: 3.135 | Time: 121.62s     
+[Epoch 10] Train acc: 0.561, loss: 1.941 | Test acc: 0.389, loss: 3.436 | Time: 121.91s    
+[Epoch 11] Train acc: 0.591, loss: 1.863 | Test acc: 0.397, loss: 3.559 | Time: 121.55s    
+[Epoch 12] Train acc: 0.637, loss: 1.562 | Test acc: 0.416, loss: 3.512 | Time: 122.03s    
+[Epoch 13] Train acc: 0.653, loss: 1.608 | Test acc: 0.408, loss: 3.868 | Time: 120.94s    
+[Epoch 14] Train acc: 0.678, loss: 1.456 | Test acc: 0.417, loss: 3.826 | Time: 120.32s    
+[Epoch 15] Train acc: 0.704, loss: 1.311 | Test acc: 0.420, loss: 4.000 | Time: 122.06s    
+[Epoch 16] Train acc: 0.744, loss: 1.135 | Test acc: 0.440, loss: 3.904 | Time: 122.01s    
+[Epoch 17] Train acc: 0.771, loss: 0.957 | Test acc: 0.444, loss: 3.874 | Time: 122.06s    
+[Epoch 18] Train acc: 0.785, loss: 0.959 | Test acc: 0.450, loss: 4.046 | Time: 121.56s    
+[Epoch 19] Train acc: 0.804, loss: 0.839 | Test acc: 0.454, loss: 4.020 | Time: 121.33s    
+[Epoch 20] Train acc: 0.812, loss: 0.842 | Test acc: 0.462, loss: 4.169 | Time: 122.18s    
+[Epoch 21] Train acc: 0.805, loss: 0.882 | Test acc: 0.447, loss: 4.380 | Time: 121.92s    
+[Epoch 22] Train acc: 0.829, loss: 0.746 | Test acc: 0.459, loss: 4.296 | Time: 121.20s    
+[Epoch 23] Train acc: 0.858, loss: 0.638 | Test acc: 0.472, loss: 4.259 | Time: 121.31s    
+[Epoch 24] Train acc: 0.858, loss: 0.713 | Test acc: 0.473, loss: 4.480 | Time: 121.59s    
+[Epoch 25] Train acc: 0.863, loss: 0.602 | Test acc: 0.472, loss: 4.375 | Time: 121.98s    
+[Epoch 26] Train acc: 0.879, loss: 0.580 | Test acc: 0.482, loss: 4.427 | Time: 121.54s    
+[Epoch 27] Train acc: 0.875, loss: 0.613 | Test acc: 0.474, loss: 4.620 | Time: 121.87s    
+[Epoch 28] Train acc: 0.884, loss: 0.602 | Test acc: 0.474, loss: 4.658 | Time: 121.94s    
+[Epoch 29] Train acc: 0.888, loss: 0.532 | Test acc: 0.481, loss: 4.629 | Time: 121.42s    
+[Epoch 30] Train acc: 0.907, loss: 0.484 | Test acc: 0.486, loss: 4.630 | Time: 121.33s    
+[Epoch 31] Train acc: 0.896, loss: 0.517 | Test acc: 0.481, loss: 4.792 | Time: 121.68s    
+[Epoch 32] Train acc: 0.912, loss: 0.419 | Test acc: 0.489, loss: 4.703 | Time: 120.32s    
+[Epoch 33] Train acc: 0.926, loss: 0.344 | Test acc: 0.494, loss: 4.691 | Time: 121.74s    
+[Epoch 34] Train acc: 0.942, loss: 0.266 | Test acc: 0.502, loss: 4.653 | Time: 121.81s    
+[Epoch 35] Train acc: 0.949, loss: 0.231 | Test acc: 0.506, loss: 4.596 | Time: 121.47s    
+[Epoch 36] Train acc: 0.951, loss: 0.225 | Test acc: 0.508, loss: 4.600 | Time: 122.26s    
+[Epoch 37] Train acc: 0.951, loss: 0.223 | Test acc: 0.509, loss: 4.606 | Time: 122.27s    
+[Epoch 38] Train acc: 0.952, loss: 0.222 | Test acc: 0.509, loss: 4.611 | Time: 121.47s    
+[Epoch 39] Train acc: 0.952, loss: 0.221 | Test acc: 0.509, loss: 4.616 | Time: 122.14s    
+[Epoch 40] Train acc: 0.953, loss: 0.220 | Test acc: 0.509, loss: 4.620 | Time: 121.10s    
+[Epoch 41] Train acc: 0.953, loss: 0.219 | Test acc: 0.510, loss: 4.623 | Time: 121.52s    
+[Epoch 42] Train acc: 0.953, loss: 0.219 | Test acc: 0.510, loss: 4.625 | Time: 122.53s    
+[Epoch 43] Train acc: 0.953, loss: 0.218 | Test acc: 0.510, loss: 4.627 | Time: 121.50s    
+[Epoch 44] Train acc: 0.953, loss: 0.218 | Test acc: 0.510, loss: 4.628 | Time: 121.18s    
+[Epoch 45] Train acc: 0.954, loss: 0.218 | Test acc: 0.510, loss: 4.629 | Time: 122.76s    
+[Epoch 46] Train acc: 0.954, loss: 0.218 | Test acc: 0.510, loss: 4.629 | Time: 121.51s    
+[Epoch 47] Train acc: 0.954, loss: 0.217 | Test acc: 0.509, loss: 4.627 | Time: 120.94s    
+[Epoch 48] Train acc: 0.954, loss: 0.218 | Test acc: 0.509, loss: 4.627 | Time: 121.79s    
+[Epoch 49] Train acc: 0.954, loss: 0.217 | Test acc: 0.509, loss: 4.625 | Time: 120.92s    
+[Epoch 50] Train acc: 0.954, loss: 0.218 | Test acc: 0.509, loss: 4.623 | Time: 121.01s    
+[Epoch 51] Train acc: 0.954, loss: 0.217 | Test acc: 0.508, loss: 4.621 | Time: 121.61s    
+Epochs:  50%|████████████████████                    | 50/100 [2:02:37<1:58:41, 142.42s/it]
+Early stopping triggered at epoch 51. Best epoch was 44
+Epochs:  50%|████████████████████                    | 50/100 [2:02:37<2:02:37, 147.14s/it]
+Total training time: 7357.21s
+Checkpoint is written to results/checkpoints/cifar100/sgd_momentum_efficientnet_b3_ns_cifar100_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for efficientnet_b3_ns: 10849932
+
+Training 500000 steps over 100 epochs
+[Epoch 1] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 227.93s         
+[Epoch 2] Train acc: 0.012, loss: nan | Test acc: 0.011, loss: nan | Time: 139.55s         
+[Epoch 3] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 143.86s         
+[Epoch 4] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 144.07s         
+[Epoch 5] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 144.48s         
+[Epoch 6] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 145.05s         
+[Epoch 7] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 144.80s         
+[Epoch 8] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 145.51s         
+[Epoch 9] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 145.33s         
+Epochs:   8%|███▍                                       | 8/100 [26:11<4:17:55, 168.21s/it]
+Early stopping triggered at epoch 9. Best epoch was 2
+Epochs:   8%|███▍                                       | 8/100 [26:11<5:01:15, 196.48s/it]
+Total training time: 1571.82s
+Checkpoint is written to results/checkpoints/cifar100/adam_efficientnet_b3_ns_cifar100_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for efficientnet_b3_ns: 10849932
+
+Training 500000 steps over 100 epochs
+[Epoch 1] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 229.05s         
+[Epoch 2] Train acc: 0.014, loss: nan | Test acc: 0.014, loss: nan | Time: 139.69s         
+[Epoch 3] Train acc: 0.011, loss: nan | Test acc: 0.011, loss: nan | Time: 144.46s         
+[Epoch 4] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 143.44s         
+[Epoch 5] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 144.40s         
+[Epoch 6] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 145.85s         
+[Epoch 7] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 144.28s         
+[Epoch 8] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 144.64s         
+[Epoch 9] Train acc: 0.010, loss: nan | Test acc: 0.010, loss: nan | Time: 144.16s         
+Epochs:   8%|███▍                                       | 8/100 [26:12<4:17:44, 168.09s/it]
+Early stopping triggered at epoch 9. Best epoch was 2
+Epochs:   8%|███▍                                       | 8/100 [26:12<5:01:25, 196.58s/it]
+Total training time: 1572.63s
+Checkpoint is written to results/checkpoints/cifar100/adamw_efficientnet_b3_ns_cifar100_pretrained.msgpack
+

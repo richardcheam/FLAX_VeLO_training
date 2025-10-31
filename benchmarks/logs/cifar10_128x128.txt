@@ -1,0 +1,276 @@
+Using: [CudaDevice(id=0)]
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/Adam.learning_rate = 0.0003
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/build_gradient_estimators.gradient_estimator_fn = @FullESOrPMAP
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/build_gradient_estimators.sample_task_family_fn = @april28_distribution_bigger
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/FullES.loss_type = 'last_recompute'
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/FullES.recompute_samples = 100
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/FullES.sign_delta_loss_scalar = 1.0
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/FullES.truncation_schedule = @LogUniformLengthSchedule()
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/gradient_worker_compute.extra_metrics = False
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/GradientAccumulator.num_average = 20
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/GradientAccumulator.opt = @Adam()
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/GradientClipOptimizer.opt = @GradientAccumulator()
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/GradientLearner.init_theta_from_path =     'jul18_continue_on_bigger_2xbs_morestale_9264/params'
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/GradientLearner.meta_init = @HyperV2()
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/GradientLearner.reset_outer_iteration = True
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/GradientLearner.theta_opt = @GradientClipOptimizer()
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/HyperV2.lstm_hidden_size = 512
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/HyperV2.param_inits = 256
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/HyperV2.use_bugged_loss_features = False
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/LogUniformLengthSchedule.max_length = 200000
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/LogUniformLengthSchedule.min_length = 200
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/periodically_save_checkpoint.time_interval = 60
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/PMAPFullES.truncation_schedule = @LogUniformLengthSchedule()
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/run_train.lopt = @HyperV2()
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/run_train.num_estimators = 8
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/run_train.num_steps = 100000
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/run_train.outer_learner_fn = @GradientLearner
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/run_train.run_num_estimators_per_gradient = 1
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/run_train.staleness = 500
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/run_train.stochastic_resample_frequency = 200
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/run_train.summary_every_n = 25
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/run_train.trainer_batch_size = 512
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/VectorizedLOptTruncatedStep.num_tasks = 8
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/VectorizedLOptTruncatedStep.random_initial_iteration_offset = 0
+opt_from_checkpoint__8026fa3c_10da_45dd_8c79_5dbfd939dad3/VectorizedLOptTruncatedStep.trunc_sched = @NeverEndingTruncationSchedule()
+
+number of parameters for resnet18: 11181642
+
+Training 156200 steps over 100 epochs
+[Epoch 1] Train acc: 0.688, loss: 0.872 | Test acc: 0.660, loss: 0.951 | Time: 184.22s
+[Epoch 2] Train acc: 0.790, loss: 0.600 | Test acc: 0.735, loss: 0.750 | Time: 54.87s
+[Epoch 3] Train acc: 0.832, loss: 0.482 | Test acc: 0.746, loss: 0.761 | Time: 56.38s
+[Epoch 4] Train acc: 0.861, loss: 0.399 | Test acc: 0.746, loss: 0.846 | Time: 60.36s
+[Epoch 5] Train acc: 0.889, loss: 0.324 | Test acc: 0.764, loss: 0.857 | Time: 58.10s
+[Epoch 6] Train acc: 0.906, loss: 0.280 | Test acc: 0.769, loss: 0.908 | Time: 59.79s
+[Epoch 7] Train acc: 0.928, loss: 0.210 | Test acc: 0.777, loss: 0.912 | Time: 58.47s
+[Epoch 8] Train acc: 0.932, loss: 0.205 | Test acc: 0.777, loss: 0.936 | Time: 60.08s
+[Epoch 9] Train acc: 0.945, loss: 0.165 | Test acc: 0.790, loss: 0.932 | Time: 60.01s
+[Epoch 10] Train acc: 0.964, loss: 0.106 | Test acc: 0.797, loss: 0.879 | Time: 77.93s
+[Epoch 11] Train acc: 0.960, loss: 0.118 | Test acc: 0.791, loss: 0.990 | Time: 106.01s
+[Epoch 12] Train acc: 0.960, loss: 0.115 | Test acc: 0.793, loss: 0.959 | Time: 137.83s
+[Epoch 13] Train acc: 0.964, loss: 0.108 | Test acc: 0.795, loss: 0.972 | Time: 134.73s
+[Epoch 14] Train acc: 0.968, loss: 0.094 | Test acc: 0.801, loss: 0.973 | Time: 139.19s
+[Epoch 15] Train acc: 0.964, loss: 0.107 | Test acc: 0.792, loss: 1.012 | Time: 134.41s
+[Epoch 16] Train acc: 0.970, loss: 0.087 | Test acc: 0.804, loss: 0.970 | Time: 133.90s
+[Epoch 17] Train acc: 0.971, loss: 0.085 | Test acc: 0.799, loss: 0.968 | Time: 136.33s
+[Epoch 18] Train acc: 0.973, loss: 0.078 | Test acc: 0.805, loss: 0.905 | Time: 131.45s
+[Epoch 19] Train acc: 0.970, loss: 0.090 | Test acc: 0.799, loss: 0.985 | Time: 135.45s
+[Epoch 20] Train acc: 0.973, loss: 0.077 | Test acc: 0.808, loss: 0.934 | Time: 135.27s
+[Epoch 21] Train acc: 0.979, loss: 0.060 | Test acc: 0.810, loss: 0.935 | Time: 135.88s
+[Epoch 22] Train acc: 0.974, loss: 0.076 | Test acc: 0.800, loss: 0.950 | Time: 134.50s
+[Epoch 23] Train acc: 0.978, loss: 0.066 | Test acc: 0.809, loss: 0.931 | Time: 134.15s
+[Epoch 24] Train acc: 0.981, loss: 0.055 | Test acc: 0.813, loss: 0.937 | Time: 133.78s
+[Epoch 25] Train acc: 0.980, loss: 0.061 | Test acc: 0.815, loss: 0.932 | Time: 130.01s
+[Epoch 26] Train acc: 0.981, loss: 0.056 | Test acc: 0.816, loss: 0.918 | Time: 130.09s
+[Epoch 27] Train acc: 0.977, loss: 0.067 | Test acc: 0.807, loss: 0.963 | Time: 136.67s
+[Epoch 28] Train acc: 0.979, loss: 0.059 | Test acc: 0.813, loss: 0.889 | Time: 135.42s
+[Epoch 29] Train acc: 0.985, loss: 0.043 | Test acc: 0.820, loss: 0.859 | Time: 134.30s
+[Epoch 30] Train acc: 0.979, loss: 0.064 | Test acc: 0.815, loss: 0.977 | Time: 137.48s
+[Epoch 31] Train acc: 0.977, loss: 0.070 | Test acc: 0.805, loss: 0.996 | Time: 135.22s
+[Epoch 32] Train acc: 0.984, loss: 0.044 | Test acc: 0.817, loss: 0.954 | Time: 131.78s
+[Epoch 33] Train acc: 0.984, loss: 0.047 | Test acc: 0.820, loss: 0.961 | Time: 125.35s
+[Epoch 34] Train acc: 0.985, loss: 0.044 | Test acc: 0.819, loss: 0.984 | Time: 136.86s
+[Epoch 35] Train acc: 0.986, loss: 0.042 | Test acc: 0.819, loss: 0.997 | Time: 135.84s
+[Epoch 36] Train acc: 0.987, loss: 0.036 | Test acc: 0.819, loss: 1.017 | Time: 135.80s
+[Epoch 37] Train acc: 0.987, loss: 0.037 | Test acc: 0.819, loss: 1.001 | Time: 136.51s
+[Epoch 38] Train acc: 0.988, loss: 0.033 | Test acc: 0.823, loss: 0.948 | Time: 131.78s
+[Epoch 39] Train acc: 0.988, loss: 0.035 | Test acc: 0.822, loss: 1.002 | Time: 129.48s
+[Epoch 40] Train acc: 0.985, loss: 0.044 | Test acc: 0.819, loss: 1.043 | Time: 120.36s
+[Epoch 41] Train acc: 0.987, loss: 0.039 | Test acc: 0.820, loss: 1.011 | Time: 127.90s
+[Epoch 42] Train acc: 0.989, loss: 0.033 | Test acc: 0.820, loss: 0.987 | Time: 132.43s
+[Epoch 43] Train acc: 0.990, loss: 0.030 | Test acc: 0.823, loss: 0.973 | Time: 135.22s
+[Epoch 44] Train acc: 0.990, loss: 0.030 | Test acc: 0.823, loss: 0.954 | Time: 133.96s
+[Epoch 45] Train acc: 0.991, loss: 0.026 | Test acc: 0.825, loss: 0.940 | Time: 135.16s
+[Epoch 46] Train acc: 0.989, loss: 0.031 | Test acc: 0.820, loss: 0.988 | Time: 133.81s
+[Epoch 47] Train acc: 0.991, loss: 0.028 | Test acc: 0.823, loss: 0.969 | Time: 134.91s
+[Epoch 48] Train acc: 0.991, loss: 0.027 | Test acc: 0.824, loss: 0.956 | Time: 129.09s
+[Epoch 49] Train acc: 0.990, loss: 0.029 | Test acc: 0.823, loss: 0.962 | Time: 134.49s
+[Epoch 50] Train acc: 0.988, loss: 0.034 | Test acc: 0.816, loss: 1.004 | Time: 132.95s
+[Epoch 51] Train acc: 0.988, loss: 0.034 | Test acc: 0.825, loss: 0.970 | Time: 135.82s
+[Epoch 52] Train acc: 0.990, loss: 0.028 | Test acc: 0.826, loss: 0.921 | Time: 135.86s
+[Epoch 53] Train acc: 0.989, loss: 0.032 | Test acc: 0.824, loss: 0.978 | Time: 137.65s
+[Epoch 54] Train acc: 0.991, loss: 0.026 | Test acc: 0.825, loss: 0.930 | Time: 139.26s
+[Epoch 55] Train acc: 0.991, loss: 0.027 | Test acc: 0.829, loss: 0.924 | Time: 130.18s
+[Epoch 56] Train acc: 0.992, loss: 0.022 | Test acc: 0.827, loss: 0.945 | Time: 132.38s
+[Epoch 57] Train acc: 0.990, loss: 0.029 | Test acc: 0.824, loss: 0.957 | Time: 134.10s
+[Epoch 58] Train acc: 0.990, loss: 0.028 | Test acc: 0.825, loss: 0.976 | Time: 140.58s
+[Epoch 59] Train acc: 0.992, loss: 0.024 | Test acc: 0.824, loss: 0.991 | Time: 135.81s
+[Epoch 60] Train acc: 0.992, loss: 0.023 | Test acc: 0.823, loss: 0.971 | Time: 126.49s
+[Epoch 61] Train acc: 0.991, loss: 0.026 | Test acc: 0.821, loss: 1.015 | Time: 130.10s
+[Epoch 62] Train acc: 0.991, loss: 0.028 | Test acc: 0.822, loss: 1.012 | Time: 133.13s
+
+Early stopping triggered at epoch 62. Best epoch was 55
+Total training time: 12560.00s
+Checkpoint is written to results/checkpoints/cifar10/velo_resnet18_cifar10_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for resnet18: 11181642
+
+Training 156200 steps over 100 epochs
+[Epoch 1] Train acc: 0.380, loss: 1.716 | Test acc: 0.377, loss: 1.718 | Time: 29.13s
+[Epoch 2] Train acc: 0.441, loss: 1.529 | Test acc: 0.434, loss: 1.538 | Time: 20.77s
+[Epoch 3] Train acc: 0.462, loss: 1.468 | Test acc: 0.451, loss: 1.488 | Time: 24.98s
+[Epoch 4] Train acc: 0.508, loss: 1.349 | Test acc: 0.492, loss: 1.383 | Time: 21.99s
+[Epoch 5] Train acc: 0.534, loss: 1.274 | Test acc: 0.512, loss: 1.330 | Time: 23.69s
+[Epoch 6] Train acc: 0.561, loss: 1.220 | Test acc: 0.540, loss: 1.285 | Time: 22.00s
+[Epoch 7] Train acc: 0.613, loss: 1.077 | Test acc: 0.586, loss: 1.161 | Time: 22.91s
+[Epoch 8] Train acc: 0.669, loss: 0.928 | Test acc: 0.635, loss: 1.034 | Time: 22.39s
+[Epoch 9] Train acc: 0.696, loss: 0.846 | Test acc: 0.648, loss: 0.988 | Time: 22.33s
+[Epoch 10] Train acc: 0.717, loss: 0.787 | Test acc: 0.660, loss: 0.967 | Time: 22.47s
+[Epoch 11] Train acc: 0.732, loss: 0.737 | Test acc: 0.662, loss: 0.960 | Time: 22.36s
+[Epoch 12] Train acc: 0.754, loss: 0.674 | Test acc: 0.673, loss: 0.959 | Time: 22.10s
+[Epoch 13] Train acc: 0.743, loss: 0.703 | Test acc: 0.645, loss: 1.072 | Time: 21.99s
+[Epoch 14] Train acc: 0.776, loss: 0.617 | Test acc: 0.654, loss: 1.072 | Time: 21.94s
+[Epoch 15] Train acc: 0.803, loss: 0.555 | Test acc: 0.666, loss: 1.082 | Time: 21.70s
+[Epoch 16] Train acc: 0.825, loss: 0.492 | Test acc: 0.670, loss: 1.122 | Time: 21.53s
+[Epoch 17] Train acc: 0.835, loss: 0.477 | Test acc: 0.670, loss: 1.223 | Time: 22.58s
+[Epoch 18] Train acc: 0.796, loss: 0.617 | Test acc: 0.638, loss: 1.456 | Time: 21.98s
+[Epoch 19] Train acc: 0.858, loss: 0.427 | Test acc: 0.675, loss: 1.373 | Time: 22.17s
+[Epoch 20] Train acc: 0.838, loss: 0.504 | Test acc: 0.652, loss: 1.522 | Time: 21.71s
+[Epoch 21] Train acc: 0.896, loss: 0.297 | Test acc: 0.692, loss: 1.343 | Time: 21.80s
+[Epoch 22] Train acc: 0.893, loss: 0.319 | Test acc: 0.678, loss: 1.483 | Time: 21.71s
+[Epoch 23] Train acc: 0.908, loss: 0.270 | Test acc: 0.694, loss: 1.500 | Time: 21.43s
+[Epoch 24] Train acc: 0.919, loss: 0.238 | Test acc: 0.694, loss: 1.506 | Time: 22.10s
+[Epoch 25] Train acc: 0.952, loss: 0.135 | Test acc: 0.711, loss: 1.386 | Time: 21.72s
+[Epoch 26] Train acc: 0.960, loss: 0.116 | Test acc: 0.710, loss: 1.458 | Time: 21.81s
+[Epoch 27] Train acc: 0.978, loss: 0.064 | Test acc: 0.718, loss: 1.391 | Time: 22.07s
+[Epoch 28] Train acc: 0.987, loss: 0.041 | Test acc: 0.727, loss: 1.360 | Time: 22.73s
+[Epoch 29] Train acc: 0.992, loss: 0.026 | Test acc: 0.734, loss: 1.362 | Time: 22.51s
+[Epoch 30] Train acc: 0.996, loss: 0.017 | Test acc: 0.736, loss: 1.364 | Time: 22.17s
+[Epoch 31] Train acc: 0.997, loss: 0.014 | Test acc: 0.737, loss: 1.372 | Time: 21.78s
+[Epoch 32] Train acc: 0.997, loss: 0.013 | Test acc: 0.739, loss: 1.376 | Time: 23.01s
+[Epoch 33] Train acc: 0.997, loss: 0.012 | Test acc: 0.738, loss: 1.381 | Time: 21.76s
+[Epoch 34] Train acc: 0.997, loss: 0.011 | Test acc: 0.736, loss: 1.392 | Time: 21.90s
+[Epoch 35] Train acc: 0.998, loss: 0.011 | Test acc: 0.735, loss: 1.404 | Time: 22.70s
+[Epoch 36] Train acc: 0.998, loss: 0.010 | Test acc: 0.736, loss: 1.413 | Time: 21.93s
+[Epoch 37] Train acc: 0.998, loss: 0.010 | Test acc: 0.738, loss: 1.414 | Time: 21.73s
+[Epoch 38] Train acc: 0.998, loss: 0.009 | Test acc: 0.736, loss: 1.417 | Time: 21.71s
+[Epoch 39] Train acc: 0.998, loss: 0.009 | Test acc: 0.736, loss: 1.421 | Time: 22.31s
+
+Early stopping triggered at epoch 39. Best epoch was 32
+Total training time: 1753.25s
+Checkpoint is written to results/checkpoints/cifar10/sgd_resnet18_cifar10_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for resnet18: 11181642
+
+Training 156200 steps over 100 epochs
+[Epoch 1] Train acc: 0.547, loss: 1.269 | Test acc: 0.534, loss: 1.302 | Time: 28.71s
+[Epoch 2] Train acc: 0.642, loss: 1.016 | Test acc: 0.617, loss: 1.106 | Time: 21.45s
+[Epoch 3] Train acc: 0.709, loss: 0.829 | Test acc: 0.663, loss: 0.981 | Time: 22.79s
+[Epoch 4] Train acc: 0.766, loss: 0.669 | Test acc: 0.695, loss: 0.893 | Time: 22.54s
+[Epoch 5] Train acc: 0.825, loss: 0.500 | Test acc: 0.723, loss: 0.833 | Time: 23.52s
+[Epoch 6] Train acc: 0.828, loss: 0.507 | Test acc: 0.710, loss: 0.985 | Time: 23.04s
+[Epoch 7] Train acc: 0.868, loss: 0.389 | Test acc: 0.729, loss: 1.005 | Time: 26.72s
+[Epoch 8] Train acc: 0.901, loss: 0.286 | Test acc: 0.745, loss: 1.008 | Time: 25.76s
+[Epoch 9] Train acc: 0.904, loss: 0.288 | Test acc: 0.749, loss: 1.054 | Time: 28.28s
+[Epoch 10] Train acc: 0.922, loss: 0.233 | Test acc: 0.748, loss: 1.115 | Time: 32.72s
+[Epoch 11] Train acc: 0.937, loss: 0.189 | Test acc: 0.756, loss: 1.108 | Time: 28.75s
+[Epoch 12] Train acc: 0.960, loss: 0.116 | Test acc: 0.774, loss: 1.067 | Time: 27.43s
+[Epoch 13] Train acc: 0.971, loss: 0.086 | Test acc: 0.781, loss: 1.080 | Time: 31.61s
+[Epoch 14] Train acc: 0.976, loss: 0.069 | Test acc: 0.783, loss: 1.129 | Time: 29.71s
+[Epoch 15] Train acc: 0.977, loss: 0.070 | Test acc: 0.777, loss: 1.197 | Time: 29.28s
+[Epoch 16] Train acc: 0.989, loss: 0.032 | Test acc: 0.791, loss: 1.140 | Time: 22.56s
+[Epoch 17] Train acc: 0.986, loss: 0.040 | Test acc: 0.782, loss: 1.183 | Time: 30.52s
+[Epoch 18] Train acc: 0.995, loss: 0.015 | Test acc: 0.799, loss: 1.130 | Time: 32.62s
+[Epoch 19] Train acc: 0.997, loss: 0.010 | Test acc: 0.797, loss: 1.156 | Time: 27.54s
+[Epoch 20] Train acc: 0.999, loss: 0.003 | Test acc: 0.806, loss: 1.113 | Time: 31.16s
+[Epoch 21] Train acc: 1.000, loss: 0.002 | Test acc: 0.807, loss: 1.111 | Time: 27.40s
+[Epoch 22] Train acc: 1.000, loss: 0.002 | Test acc: 0.807, loss: 1.116 | Time: 34.56s
+[Epoch 23] Train acc: 1.000, loss: 0.002 | Test acc: 0.808, loss: 1.111 | Time: 33.70s
+[Epoch 24] Train acc: 1.000, loss: 0.001 | Test acc: 0.809, loss: 1.109 | Time: 29.31s
+[Epoch 25] Train acc: 1.000, loss: 0.001 | Test acc: 0.811, loss: 1.112 | Time: 30.30s
+[Epoch 26] Train acc: 1.000, loss: 0.001 | Test acc: 0.810, loss: 1.117 | Time: 32.37s
+[Epoch 27] Train acc: 1.000, loss: 0.001 | Test acc: 0.809, loss: 1.118 | Time: 34.02s
+[Epoch 28] Train acc: 1.000, loss: 0.001 | Test acc: 0.810, loss: 1.123 | Time: 26.50s
+[Epoch 29] Train acc: 1.000, loss: 0.001 | Test acc: 0.810, loss: 1.124 | Time: 35.59s
+[Epoch 30] Train acc: 1.000, loss: 0.001 | Test acc: 0.809, loss: 1.127 | Time: 29.81s
+[Epoch 31] Train acc: 1.000, loss: 0.001 | Test acc: 0.809, loss: 1.130 | Time: 27.78s
+[Epoch 32] Train acc: 1.000, loss: 0.001 | Test acc: 0.809, loss: 1.131 | Time: 32.57s
+
+Early stopping triggered at epoch 32. Best epoch was 25
+Total training time: 1955.03s
+Checkpoint is written to results/checkpoints/cifar10/sgd_momentum_resnet18_cifar10_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for resnet18: 11181642
+
+Training 156200 steps over 100 epochs
+[Epoch 1] Train acc: 0.602, loss: 1.113 | Test acc: 0.580, loss: 1.184 | Time: 31.65s
+[Epoch 2] Train acc: 0.711, loss: 0.810 | Test acc: 0.672, loss: 0.942 | Time: 21.61s
+[Epoch 3] Train acc: 0.753, loss: 0.709 | Test acc: 0.704, loss: 0.921 | Time: 24.41s
+[Epoch 4] Train acc: 0.814, loss: 0.550 | Test acc: 0.727, loss: 0.905 | Time: 22.90s
+[Epoch 5] Train acc: 0.876, loss: 0.371 | Test acc: 0.755, loss: 0.910 | Time: 22.31s
+[Epoch 6] Train acc: 0.912, loss: 0.259 | Test acc: 0.769, loss: 0.956 | Time: 22.99s
+[Epoch 7] Train acc: 0.918, loss: 0.251 | Test acc: 0.768, loss: 1.063 | Time: 22.73s
+[Epoch 8] Train acc: 0.912, loss: 0.282 | Test acc: 0.753, loss: 1.167 | Time: 22.29s
+[Epoch 9] Train acc: 0.951, loss: 0.147 | Test acc: 0.779, loss: 1.064 | Time: 22.61s
+[Epoch 10] Train acc: 0.947, loss: 0.165 | Test acc: 0.774, loss: 1.139 | Time: 23.32s
+[Epoch 11] Train acc: 0.958, loss: 0.130 | Test acc: 0.781, loss: 1.210 | Time: 22.61s
+[Epoch 12] Train acc: 0.960, loss: 0.127 | Test acc: 0.780, loss: 1.233 | Time: 22.24s
+[Epoch 13] Train acc: 0.962, loss: 0.125 | Test acc: 0.781, loss: 1.268 | Time: 23.25s
+[Epoch 14] Train acc: 0.961, loss: 0.130 | Test acc: 0.778, loss: 1.305 | Time: 22.62s
+[Epoch 15] Train acc: 0.943, loss: 0.207 | Test acc: 0.760, loss: 1.482 | Time: 22.53s
+[Epoch 16] Train acc: 0.971, loss: 0.089 | Test acc: 0.784, loss: 1.261 | Time: 23.18s
+[Epoch 17] Train acc: 0.935, loss: 0.266 | Test acc: 0.745, loss: 1.606 | Time: 23.30s
+[Epoch 18] Train acc: 0.963, loss: 0.140 | Test acc: 0.770, loss: 1.491 | Time: 23.07s
+[Epoch 19] Train acc: 0.979, loss: 0.070 | Test acc: 0.789, loss: 1.398 | Time: 22.72s
+[Epoch 20] Train acc: 0.972, loss: 0.087 | Test acc: 0.782, loss: 1.380 | Time: 22.73s
+[Epoch 21] Train acc: 0.982, loss: 0.058 | Test acc: 0.796, loss: 1.378 | Time: 23.01s
+[Epoch 22] Train acc: 0.983, loss: 0.054 | Test acc: 0.793, loss: 1.356 | Time: 22.69s
+[Epoch 23] Train acc: 0.972, loss: 0.095 | Test acc: 0.778, loss: 1.506 | Time: 22.76s
+[Epoch 24] Train acc: 0.981, loss: 0.062 | Test acc: 0.787, loss: 1.455 | Time: 22.89s
+[Epoch 25] Train acc: 0.987, loss: 0.042 | Test acc: 0.799, loss: 1.415 | Time: 23.12s
+[Epoch 26] Train acc: 0.961, loss: 0.147 | Test acc: 0.765, loss: 1.693 | Time: 22.77s
+[Epoch 27] Train acc: 0.987, loss: 0.041 | Test acc: 0.798, loss: 1.396 | Time: 23.12s
+[Epoch 28] Train acc: 0.984, loss: 0.052 | Test acc: 0.795, loss: 1.585 | Time: 23.05s
+[Epoch 29] Train acc: 0.983, loss: 0.057 | Test acc: 0.784, loss: 1.622 | Time: 23.52s
+[Epoch 30] Train acc: 0.984, loss: 0.053 | Test acc: 0.794, loss: 1.514 | Time: 22.70s
+[Epoch 31] Train acc: 0.988, loss: 0.038 | Test acc: 0.794, loss: 1.639 | Time: 23.82s
+[Epoch 32] Train acc: 0.984, loss: 0.053 | Test acc: 0.793, loss: 1.538 | Time: 22.81s
+
+Early stopping triggered at epoch 32. Best epoch was 25
+Total training time: 1556.37s
+Checkpoint is written to results/checkpoints/cifar10/adam_resnet18_cifar10_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for resnet18: 11181642
+
+Training 156200 steps over 100 epochs
+[Epoch 1] Train acc: 0.603, loss: 1.130 | Test acc: 0.587, loss: 1.203 | Time: 31.65s
+[Epoch 2] Train acc: 0.723, loss: 0.786 | Test acc: 0.681, loss: 0.918 | Time: 21.75s
+[Epoch 3] Train acc: 0.808, loss: 0.554 | Test acc: 0.735, loss: 0.784 | Time: 23.15s
+[Epoch 4] Train acc: 0.835, loss: 0.476 | Test acc: 0.734, loss: 0.849 | Time: 22.89s
+[Epoch 5] Train acc: 0.878, loss: 0.360 | Test acc: 0.752, loss: 0.930 | Time: 26.32s
+[Epoch 6] Train acc: 0.867, loss: 0.414 | Test acc: 0.734, loss: 1.113 | Time: 23.26s
+[Epoch 7] Train acc: 0.923, loss: 0.234 | Test acc: 0.763, loss: 1.062 | Time: 24.80s
+[Epoch 8] Train acc: 0.926, loss: 0.230 | Test acc: 0.761, loss: 1.154 | Time: 23.42s
+[Epoch 9] Train acc: 0.926, loss: 0.231 | Test acc: 0.760, loss: 1.253 | Time: 24.15s
+[Epoch 10] Train acc: 0.954, loss: 0.142 | Test acc: 0.781, loss: 1.169 | Time: 22.89s
+[Epoch 11] Train acc: 0.933, loss: 0.232 | Test acc: 0.759, loss: 1.401 | Time: 23.85s
+[Epoch 12] Train acc: 0.953, loss: 0.156 | Test acc: 0.774, loss: 1.314 | Time: 22.60s
+[Epoch 13] Train acc: 0.968, loss: 0.099 | Test acc: 0.781, loss: 1.237 | Time: 24.74s
+[Epoch 14] Train acc: 0.969, loss: 0.098 | Test acc: 0.787, loss: 1.277 | Time: 24.03s
+[Epoch 15] Train acc: 0.967, loss: 0.111 | Test acc: 0.777, loss: 1.411 | Time: 22.60s
+[Epoch 16] Train acc: 0.972, loss: 0.087 | Test acc: 0.784, loss: 1.305 | Time: 23.21s
+[Epoch 17] Train acc: 0.969, loss: 0.097 | Test acc: 0.780, loss: 1.346 | Time: 23.08s
+[Epoch 18] Train acc: 0.974, loss: 0.085 | Test acc: 0.788, loss: 1.350 | Time: 24.54s
+[Epoch 19] Train acc: 0.974, loss: 0.089 | Test acc: 0.781, loss: 1.408 | Time: 22.55s
+[Epoch 20] Train acc: 0.976, loss: 0.081 | Test acc: 0.788, loss: 1.408 | Time: 23.68s
+[Epoch 21] Train acc: 0.982, loss: 0.062 | Test acc: 0.791, loss: 1.347 | Time: 22.88s
+[Epoch 22] Train acc: 0.976, loss: 0.076 | Test acc: 0.783, loss: 1.478 | Time: 23.07s
+[Epoch 23] Train acc: 0.980, loss: 0.069 | Test acc: 0.783, loss: 1.537 | Time: 23.75s
+[Epoch 24] Train acc: 0.975, loss: 0.094 | Test acc: 0.784, loss: 1.589 | Time: 23.15s
+[Epoch 25] Train acc: 0.978, loss: 0.078 | Test acc: 0.786, loss: 1.594 | Time: 23.23s
+[Epoch 26] Train acc: 0.977, loss: 0.083 | Test acc: 0.779, loss: 1.592 | Time: 22.68s
+[Epoch 27] Train acc: 0.983, loss: 0.057 | Test acc: 0.787, loss: 1.537 | Time: 22.74s
+[Epoch 28] Train acc: 0.980, loss: 0.072 | Test acc: 0.788, loss: 1.612 | Time: 22.57s
+
+Early stopping triggered at epoch 28. Best epoch was 21
+Total training time: 1435.90s
+Checkpoint is written to results/checkpoints/cifar10/adamw_resnet18_cifar10_pretrained.msgpack

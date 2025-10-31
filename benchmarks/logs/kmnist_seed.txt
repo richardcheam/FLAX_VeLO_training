@@ -1,0 +1,54 @@
+Using: [CudaDevice(id=0)]
+################### TRAINING WITH velo ###################
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/Adam.learning_rate = 0.0003
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/build_gradient_estimators.gradient_estimator_fn = @FullESOrPMAP
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/build_gradient_estimators.sample_task_family_fn = @april28_distribution_bigger
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/FullES.loss_type = 'last_recompute'
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/FullES.recompute_samples = 100
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/FullES.sign_delta_loss_scalar = 1.0
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/FullES.truncation_schedule = @LogUniformLengthSchedule()
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/gradient_worker_compute.extra_metrics = False
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/GradientAccumulator.num_average = 20
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/GradientAccumulator.opt = @Adam()
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/GradientClipOptimizer.opt = @GradientAccumulator()
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/GradientLearner.init_theta_from_path =     'jul18_continue_on_bigger_2xbs_morestale_9264/params'
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/GradientLearner.meta_init = @HyperV2()
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/GradientLearner.reset_outer_iteration = True
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/GradientLearner.theta_opt = @GradientClipOptimizer()
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/HyperV2.lstm_hidden_size = 512
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/HyperV2.param_inits = 256
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/HyperV2.use_bugged_loss_features = False
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/LogUniformLengthSchedule.max_length = 200000
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/LogUniformLengthSchedule.min_length = 200
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/periodically_save_checkpoint.time_interval = 60
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/PMAPFullES.truncation_schedule = @LogUniformLengthSchedule()
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/run_train.lopt = @HyperV2()
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/run_train.num_estimators = 8
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/run_train.num_steps = 100000
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/run_train.outer_learner_fn = @GradientLearner
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/run_train.run_num_estimators_per_gradient = 1
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/run_train.staleness = 500
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/run_train.stochastic_resample_frequency = 200
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/run_train.summary_every_n = 25
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/run_train.trainer_batch_size = 512
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/VectorizedLOptTruncatedStep.num_tasks = 8
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/VectorizedLOptTruncatedStep.random_initial_iteration_offset = 0
+opt_from_checkpoint__d6e32195_c1aa_4fe7_9b4c_4e640a94e2e2/VectorizedLOptTruncatedStep.trunc_sched = @NeverEndingTruncationSchedule()
+
+number of parameters for resnet18: 11175370
+
+Training 42150 steps over 50 epochs
+[Epoch 1] Train acc: 0.979, loss: 0.070 | Test acc: 0.967, loss: 0.105 | Time: 161.72s
+[Epoch 2] Train acc: 0.987, loss: 0.039 | Test acc: 0.975, loss: 0.082 | Time: 31.13s
+[Epoch 3] Train acc: 0.989, loss: 0.033 | Test acc: 0.977, loss: 0.081 | Time: 31.37s
+[Epoch 4] Train acc: 0.994, loss: 0.018 | Test acc: 0.981, loss: 0.068 | Time: 31.75s
+[Epoch 5] Train acc: 0.995, loss: 0.016 | Test acc: 0.986, loss: 0.061 | Time: 31.31s
+[Epoch 6] Train acc: 0.995, loss: 0.016 | Test acc: 0.983, loss: 0.074 | Time: 31.29s
+[Epoch 7] Train acc: 0.997, loss: 0.010 | Test acc: 0.985, loss: 0.072 | Time: 31.16s
+[Epoch 8] Train acc: 0.997, loss: 0.008 | Test acc: 0.984, loss: 0.070 | Time: 31.18s
+[Epoch 9] Train acc: 0.997, loss: 0.008 | Test acc: 0.987, loss: 0.067 | Time: 31.30s
+[Epoch 10] Train acc: 0.998, loss: 0.006 | Test acc: 0.986, loss: 0.061 | Time: 31.75s
+[Epoch 11] Train acc: 0.998, loss: 0.006 | Test acc: 0.985, loss: 0.065 | Time: 31.26s
+[Epoch 12] Train acc: 0.997, loss: 0.010 | Test acc: 0.985, loss: 0.071 | Time: 31.71s
+[Epoch 13] Train acc: 0.998, loss: 0.006 | Test acc: 0.986, loss: 0.060 | Time: 31.28s
+[Epoch 14] Train acc: 0.997, loss: 0.009 | Test acc: 0.983, loss: 0.077 | Time: 31.51s

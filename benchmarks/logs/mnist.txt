@@ -1,0 +1,270 @@
+Using: [CudaDevice(id=0)]
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/Adam.learning_rate = 0.0003
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/build_gradient_estimators.gradient_estimator_fn = @FullESOrPMAP
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/build_gradient_estimators.sample_task_family_fn = @april28_distribution_bigger
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/FullES.loss_type = 'last_recompute'
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/FullES.recompute_samples = 100
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/FullES.sign_delta_loss_scalar = 1.0
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/FullES.truncation_schedule = @LogUniformLengthSchedule()
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/gradient_worker_compute.extra_metrics = False
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/GradientAccumulator.num_average = 20
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/GradientAccumulator.opt = @Adam()
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/GradientClipOptimizer.opt = @GradientAccumulator()
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/GradientLearner.init_theta_from_path =     'jul18_continue_on_bigger_2xbs_morestale_9264/params'
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/GradientLearner.meta_init = @HyperV2()
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/GradientLearner.reset_outer_iteration = True
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/GradientLearner.theta_opt = @GradientClipOptimizer()
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/HyperV2.lstm_hidden_size = 512
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/HyperV2.param_inits = 256
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/HyperV2.use_bugged_loss_features = False
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/LogUniformLengthSchedule.max_length = 200000
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/LogUniformLengthSchedule.min_length = 200
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/periodically_save_checkpoint.time_interval = 60
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/PMAPFullES.truncation_schedule = @LogUniformLengthSchedule()
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/run_train.lopt = @HyperV2()
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/run_train.num_estimators = 8
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/run_train.num_steps = 100000
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/run_train.outer_learner_fn = @GradientLearner
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/run_train.run_num_estimators_per_gradient = 1
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/run_train.staleness = 500
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/run_train.stochastic_resample_frequency = 200
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/run_train.summary_every_n = 25
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/run_train.trainer_batch_size = 512
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/VectorizedLOptTruncatedStep.num_tasks = 8
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/VectorizedLOptTruncatedStep.random_initial_iteration_offset = 0
+opt_from_checkpoint__e5666abe_671d_4322_b716_389b0210b56c/VectorizedLOptTruncatedStep.trunc_sched = @NeverEndingTruncationSchedule()
+
+number of parameters for resnet18: 11175370
+
+Training 23400 steps over 100 epochs
+[Epoch 1] Train acc: 0.980, loss: 0.076 | Test acc: 0.977, loss: 0.081 | Time: 137.66s
+[Epoch 2] Train acc: 0.985, loss: 0.048 | Test acc: 0.978, loss: 0.065 | Time: 8.91s
+[Epoch 3] Train acc: 0.991, loss: 0.027 | Test acc: 0.985, loss: 0.049 | Time: 8.93s
+[Epoch 4] Train acc: 0.996, loss: 0.013 | Test acc: 0.989, loss: 0.041 | Time: 8.94s
+[Epoch 5] Train acc: 0.996, loss: 0.012 | Test acc: 0.989, loss: 0.038 | Time: 8.94s
+[Epoch 6] Train acc: 0.997, loss: 0.010 | Test acc: 0.989, loss: 0.039 | Time: 8.92s
+[Epoch 7] Train acc: 0.997, loss: 0.008 | Test acc: 0.990, loss: 0.042 | Time: 8.97s
+[Epoch 8] Train acc: 0.996, loss: 0.013 | Test acc: 0.987, loss: 0.051 | Time: 8.96s
+[Epoch 9] Train acc: 0.997, loss: 0.010 | Test acc: 0.988, loss: 0.042 | Time: 8.96s
+[Epoch 10] Train acc: 0.997, loss: 0.009 | Test acc: 0.991, loss: 0.038 | Time: 8.95s
+[Epoch 11] Train acc: 0.997, loss: 0.007 | Test acc: 0.990, loss: 0.039 | Time: 8.94s
+[Epoch 12] Train acc: 0.999, loss: 0.004 | Test acc: 0.991, loss: 0.032 | Time: 8.97s
+[Epoch 13] Train acc: 0.999, loss: 0.004 | Test acc: 0.991, loss: 0.036 | Time: 8.97s
+[Epoch 14] Train acc: 0.999, loss: 0.003 | Test acc: 0.992, loss: 0.034 | Time: 8.94s
+[Epoch 15] Train acc: 0.999, loss: 0.004 | Test acc: 0.992, loss: 0.035 | Time: 8.96s
+[Epoch 16] Train acc: 0.999, loss: 0.003 | Test acc: 0.993, loss: 0.032 | Time: 8.95s
+[Epoch 17] Train acc: 0.999, loss: 0.003 | Test acc: 0.992, loss: 0.033 | Time: 8.96s
+[Epoch 18] Train acc: 0.999, loss: 0.004 | Test acc: 0.993, loss: 0.033 | Time: 8.95s
+[Epoch 19] Train acc: 0.999, loss: 0.002 | Test acc: 0.992, loss: 0.036 | Time: 8.96s
+[Epoch 20] Train acc: 0.999, loss: 0.002 | Test acc: 0.993, loss: 0.036 | Time: 8.97s
+[Epoch 21] Train acc: 0.999, loss: 0.002 | Test acc: 0.993, loss: 0.032 | Time: 8.96s
+[Epoch 22] Train acc: 0.999, loss: 0.003 | Test acc: 0.992, loss: 0.038 | Time: 8.98s
+[Epoch 23] Train acc: 0.999, loss: 0.004 | Test acc: 0.991, loss: 0.044 | Time: 8.96s
+[Epoch 24] Train acc: 0.999, loss: 0.002 | Test acc: 0.992, loss: 0.041 | Time: 8.96s
+[Epoch 25] Train acc: 0.999, loss: 0.002 | Test acc: 0.992, loss: 0.038 | Time: 8.97s
+[Epoch 26] Train acc: 0.999, loss: 0.003 | Test acc: 0.992, loss: 0.041 | Time: 8.95s
+[Epoch 27] Train acc: 0.999, loss: 0.003 | Test acc: 0.993, loss: 0.035 | Time: 8.97s
+[Epoch 28] Train acc: 0.999, loss: 0.002 | Test acc: 0.993, loss: 0.033 | Time: 8.95s
+
+Early stopping triggered at epoch 28. Best epoch was 18
+Total training time: 392.35s
+
+Evaluating final test accuracy:
+Final Model Accuracy: 0.9934 | Loss: 0.0321
+EMA Model Accuracy:   0.9802 | Loss: 0.0988
+SWA Model Accuracy:   0.0944 | Loss: 31.3226
+Checkpoint is written to results/checkpoints/mnist/velo_resnet18_mnist_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for resnet18: 11175370
+
+Training 23400 steps over 100 epochs
+[Epoch 1] Train acc: 0.934, loss: 0.268 | Test acc: 0.935, loss: 0.257 | Time: 9.04s
+[Epoch 2] Train acc: 0.960, loss: 0.153 | Test acc: 0.959, loss: 0.150 | Time: 1.69s
+[Epoch 3] Train acc: 0.970, loss: 0.113 | Test acc: 0.967, loss: 0.115 | Time: 1.68s
+[Epoch 4] Train acc: 0.976, loss: 0.090 | Test acc: 0.973, loss: 0.096 | Time: 1.68s
+[Epoch 5] Train acc: 0.981, loss: 0.074 | Test acc: 0.976, loss: 0.084 | Time: 1.69s
+[Epoch 6] Train acc: 0.984, loss: 0.064 | Test acc: 0.977, loss: 0.078 | Time: 1.67s
+[Epoch 7] Train acc: 0.987, loss: 0.055 | Test acc: 0.979, loss: 0.072 | Time: 1.68s
+[Epoch 8] Train acc: 0.988, loss: 0.048 | Test acc: 0.979, loss: 0.068 | Time: 1.69s
+[Epoch 9] Train acc: 0.990, loss: 0.042 | Test acc: 0.980, loss: 0.063 | Time: 1.68s
+[Epoch 10] Train acc: 0.991, loss: 0.037 | Test acc: 0.981, loss: 0.060 | Time: 1.70s
+[Epoch 11] Train acc: 0.993, loss: 0.033 | Test acc: 0.982, loss: 0.058 | Time: 1.68s
+[Epoch 12] Train acc: 0.993, loss: 0.030 | Test acc: 0.983, loss: 0.057 | Time: 1.68s
+[Epoch 13] Train acc: 0.994, loss: 0.027 | Test acc: 0.983, loss: 0.055 | Time: 1.68s
+[Epoch 14] Train acc: 0.995, loss: 0.024 | Test acc: 0.983, loss: 0.054 | Time: 1.70s
+[Epoch 15] Train acc: 0.996, loss: 0.021 | Test acc: 0.984, loss: 0.053 | Time: 1.68s
+[Epoch 16] Train acc: 0.997, loss: 0.019 | Test acc: 0.984, loss: 0.052 | Time: 1.68s
+[Epoch 17] Train acc: 0.997, loss: 0.017 | Test acc: 0.984, loss: 0.051 | Time: 1.67s
+[Epoch 18] Train acc: 0.998, loss: 0.015 | Test acc: 0.984, loss: 0.051 | Time: 1.71s
+[Epoch 19] Train acc: 0.998, loss: 0.014 | Test acc: 0.984, loss: 0.050 | Time: 1.69s
+[Epoch 20] Train acc: 0.999, loss: 0.012 | Test acc: 0.985, loss: 0.049 | Time: 1.69s
+[Epoch 21] Train acc: 0.999, loss: 0.011 | Test acc: 0.985, loss: 0.049 | Time: 1.70s
+[Epoch 22] Train acc: 0.999, loss: 0.010 | Test acc: 0.984, loss: 0.048 | Time: 1.70s
+[Epoch 23] Train acc: 0.999, loss: 0.009 | Test acc: 0.985, loss: 0.048 | Time: 1.69s
+[Epoch 24] Train acc: 0.999, loss: 0.009 | Test acc: 0.985, loss: 0.047 | Time: 1.68s
+[Epoch 25] Train acc: 1.000, loss: 0.008 | Test acc: 0.986, loss: 0.047 | Time: 1.71s
+[Epoch 26] Train acc: 1.000, loss: 0.007 | Test acc: 0.985, loss: 0.048 | Time: 1.73s
+[Epoch 27] Train acc: 1.000, loss: 0.007 | Test acc: 0.985, loss: 0.048 | Time: 1.74s
+[Epoch 28] Train acc: 1.000, loss: 0.006 | Test acc: 0.985, loss: 0.048 | Time: 1.67s
+[Epoch 29] Train acc: 1.000, loss: 0.006 | Test acc: 0.986, loss: 0.048 | Time: 1.66s
+[Epoch 30] Train acc: 1.000, loss: 0.005 | Test acc: 0.985, loss: 0.048 | Time: 1.74s
+[Epoch 31] Train acc: 1.000, loss: 0.005 | Test acc: 0.985, loss: 0.048 | Time: 5.56s
+[Epoch 32] Train acc: 1.000, loss: 0.005 | Test acc: 0.986, loss: 0.048 | Time: 1.72s
+[Epoch 33] Train acc: 1.000, loss: 0.004 | Test acc: 0.986, loss: 0.047 | Time: 1.73s
+[Epoch 34] Train acc: 1.000, loss: 0.004 | Test acc: 0.985, loss: 0.048 | Time: 3.76s
+[Epoch 35] Train acc: 1.000, loss: 0.004 | Test acc: 0.986, loss: 0.049 | Time: 1.79s
+
+Early stopping triggered at epoch 35. Best epoch was 25
+Total training time: 87.89s
+
+Evaluating final test accuracy:
+Final Model Accuracy: 0.9861 | Loss: 0.0483
+EMA Model Accuracy:   0.9849 | Loss: 0.0482
+SWA Model Accuracy:   0.1239 | Loss: 2.9452
+Checkpoint is written to results/checkpoints/mnist/sgd_resnet18_mnist_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for resnet18: 11175370
+
+Training 23400 steps over 100 epochs
+[Epoch 1] Train acc: 0.983, loss: 0.061 | Test acc: 0.979, loss: 0.070 | Time: 10.12s
+[Epoch 2] Train acc: 0.991, loss: 0.033 | Test acc: 0.983, loss: 0.054 | Time: 1.82s
+[Epoch 3] Train acc: 0.995, loss: 0.018 | Test acc: 0.986, loss: 0.043 | Time: 1.82s
+[Epoch 4] Train acc: 0.998, loss: 0.011 | Test acc: 0.987, loss: 0.041 | Time: 1.82s
+[Epoch 5] Train acc: 0.999, loss: 0.008 | Test acc: 0.987, loss: 0.039 | Time: 1.83s
+[Epoch 6] Train acc: 0.999, loss: 0.005 | Test acc: 0.988, loss: 0.038 | Time: 1.79s
+[Epoch 7] Train acc: 0.999, loss: 0.003 | Test acc: 0.988, loss: 0.038 | Time: 1.82s
+[Epoch 8] Train acc: 1.000, loss: 0.002 | Test acc: 0.989, loss: 0.036 | Time: 1.82s
+[Epoch 9] Train acc: 1.000, loss: 0.001 | Test acc: 0.989, loss: 0.034 | Time: 1.76s
+[Epoch 10] Train acc: 1.000, loss: 0.001 | Test acc: 0.989, loss: 0.035 | Time: 1.86s
+[Epoch 11] Train acc: 1.000, loss: 0.001 | Test acc: 0.989, loss: 0.034 | Time: 1.82s
+[Epoch 12] Train acc: 1.000, loss: 0.001 | Test acc: 0.989, loss: 0.035 | Time: 1.80s
+[Epoch 13] Train acc: 1.000, loss: 0.001 | Test acc: 0.989, loss: 0.035 | Time: 1.85s
+[Epoch 14] Train acc: 1.000, loss: 0.001 | Test acc: 0.989, loss: 0.036 | Time: 1.77s
+[Epoch 15] Train acc: 1.000, loss: 0.001 | Test acc: 0.989, loss: 0.035 | Time: 1.77s
+[Epoch 16] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.035 | Time: 1.83s
+[Epoch 17] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.035 | Time: 1.79s
+[Epoch 18] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.037 | Time: 1.84s
+[Epoch 19] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.036 | Time: 1.81s
+[Epoch 20] Train acc: 1.000, loss: 0.000 | Test acc: 0.990, loss: 0.036 | Time: 1.83s
+[Epoch 21] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.037 | Time: 1.76s
+[Epoch 22] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.037 | Time: 1.83s
+[Epoch 23] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.037 | Time: 1.90s
+[Epoch 24] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.037 | Time: 1.86s
+[Epoch 25] Train acc: 1.000, loss: 0.000 | Test acc: 0.990, loss: 0.036 | Time: 1.87s
+[Epoch 26] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.037 | Time: 1.79s
+[Epoch 27] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.037 | Time: 1.85s
+[Epoch 28] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.038 | Time: 1.80s
+[Epoch 29] Train acc: 1.000, loss: 0.000 | Test acc: 0.990, loss: 0.037 | Time: 1.81s
+[Epoch 30] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.038 | Time: 1.76s
+[Epoch 31] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.038 | Time: 3.86s
+[Epoch 32] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.038 | Time: 1.78s
+[Epoch 33] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.037 | Time: 1.87s
+[Epoch 34] Train acc: 1.000, loss: 0.000 | Test acc: 0.990, loss: 0.038 | Time: 3.84s
+[Epoch 35] Train acc: 1.000, loss: 0.000 | Test acc: 0.989, loss: 0.039 | Time: 1.80s
+
+Early stopping triggered at epoch 35. Best epoch was 25
+Total training time: 91.26s
+
+Evaluating final test accuracy:
+Final Model Accuracy: 0.9894 | Loss: 0.0369
+EMA Model Accuracy:   0.9894 | Loss: 0.0381
+SWA Model Accuracy:   0.1192 | Loss: 2.7449
+Checkpoint is written to results/checkpoints/mnist/sgd_momentum_resnet18_mnist_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for resnet18: 11175370
+
+Training 23400 steps over 100 epochs
+[Epoch 1] Train acc: 0.980, loss: 0.065 | Test acc: 0.980, loss: 0.060 | Time: 10.60s
+[Epoch 2] Train acc: 0.982, loss: 0.057 | Test acc: 0.980, loss: 0.067 | Time: 1.82s
+[Epoch 3] Train acc: 0.991, loss: 0.030 | Test acc: 0.988, loss: 0.044 | Time: 1.89s
+[Epoch 4] Train acc: 0.986, loss: 0.046 | Test acc: 0.984, loss: 0.060 | Time: 1.86s
+[Epoch 5] Train acc: 0.993, loss: 0.024 | Test acc: 0.987, loss: 0.046 | Time: 1.88s
+[Epoch 6] Train acc: 0.994, loss: 0.021 | Test acc: 0.991, loss: 0.037 | Time: 1.88s
+[Epoch 7] Train acc: 0.991, loss: 0.030 | Test acc: 0.986, loss: 0.057 | Time: 1.88s
+[Epoch 8] Train acc: 0.992, loss: 0.027 | Test acc: 0.986, loss: 0.055 | Time: 1.86s
+[Epoch 9] Train acc: 0.991, loss: 0.027 | Test acc: 0.984, loss: 0.057 | Time: 1.90s
+[Epoch 10] Train acc: 0.984, loss: 0.057 | Test acc: 0.980, loss: 0.084 | Time: 1.94s
+[Epoch 11] Train acc: 0.997, loss: 0.011 | Test acc: 0.990, loss: 0.039 | Time: 1.89s
+[Epoch 12] Train acc: 0.995, loss: 0.018 | Test acc: 0.989, loss: 0.046 | Time: 1.88s
+[Epoch 13] Train acc: 0.997, loss: 0.009 | Test acc: 0.991, loss: 0.039 | Time: 1.89s
+[Epoch 14] Train acc: 0.997, loss: 0.010 | Test acc: 0.991, loss: 0.040 | Time: 1.90s
+[Epoch 15] Train acc: 0.995, loss: 0.016 | Test acc: 0.989, loss: 0.054 | Time: 1.94s
+[Epoch 16] Train acc: 0.995, loss: 0.016 | Test acc: 0.990, loss: 0.043 | Time: 1.87s
+[Epoch 17] Train acc: 0.997, loss: 0.010 | Test acc: 0.991, loss: 0.041 | Time: 1.87s
+[Epoch 18] Train acc: 0.994, loss: 0.021 | Test acc: 0.988, loss: 0.062 | Time: 1.86s
+[Epoch 19] Train acc: 0.997, loss: 0.009 | Test acc: 0.991, loss: 0.036 | Time: 1.90s
+[Epoch 20] Train acc: 0.997, loss: 0.011 | Test acc: 0.990, loss: 0.044 | Time: 1.93s
+[Epoch 21] Train acc: 0.996, loss: 0.016 | Test acc: 0.989, loss: 0.046 | Time: 1.89s
+[Epoch 22] Train acc: 0.998, loss: 0.008 | Test acc: 0.991, loss: 0.050 | Time: 1.95s
+[Epoch 23] Train acc: 0.995, loss: 0.021 | Test acc: 0.988, loss: 0.054 | Time: 1.94s
+
+Early stopping triggered at epoch 23. Best epoch was 13
+Total training time: 62.90s
+
+Evaluating final test accuracy:
+Final Model Accuracy: 0.9910 | Loss: 0.0402
+EMA Model Accuracy:   0.4268 | Loss: 69.4454
+SWA Model Accuracy:   0.0958 | Loss: 3.5862
+Checkpoint is written to results/checkpoints/mnist/adam_resnet18_mnist_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for resnet18: 11175370
+
+Training 23400 steps over 100 epochs
+[Epoch 1] Train acc: 0.969, loss: 0.096 | Test acc: 0.968, loss: 0.095 | Time: 11.14s
+[Epoch 2] Train acc: 0.987, loss: 0.040 | Test acc: 0.985, loss: 0.048 | Time: 1.87s
+[Epoch 3] Train acc: 0.981, loss: 0.061 | Test acc: 0.978, loss: 0.072 | Time: 1.85s
+[Epoch 4] Train acc: 0.990, loss: 0.034 | Test acc: 0.985, loss: 0.053 | Time: 1.96s
+[Epoch 5] Train acc: 0.993, loss: 0.023 | Test acc: 0.989, loss: 0.039 | Time: 1.87s
+[Epoch 6] Train acc: 0.989, loss: 0.037 | Test acc: 0.983, loss: 0.067 | Time: 1.87s
+[Epoch 7] Train acc: 0.989, loss: 0.034 | Test acc: 0.984, loss: 0.064 | Time: 1.93s
+[Epoch 8] Train acc: 0.993, loss: 0.025 | Test acc: 0.987, loss: 0.056 | Time: 1.88s
+[Epoch 9] Train acc: 0.994, loss: 0.020 | Test acc: 0.988, loss: 0.044 | Time: 1.88s
+[Epoch 10] Train acc: 0.994, loss: 0.020 | Test acc: 0.988, loss: 0.046 | Time: 1.85s
+[Epoch 11] Train acc: 0.993, loss: 0.021 | Test acc: 0.989, loss: 0.051 | Time: 1.86s
+[Epoch 12] Train acc: 0.993, loss: 0.021 | Test acc: 0.987, loss: 0.054 | Time: 1.89s
+[Epoch 13] Train acc: 0.997, loss: 0.009 | Test acc: 0.990, loss: 0.040 | Time: 1.84s
+[Epoch 14] Train acc: 0.996, loss: 0.013 | Test acc: 0.989, loss: 0.045 | Time: 1.81s
+[Epoch 15] Train acc: 0.996, loss: 0.013 | Test acc: 0.988, loss: 0.051 | Time: 1.84s
+[Epoch 16] Train acc: 0.993, loss: 0.028 | Test acc: 0.986, loss: 0.069 | Time: 1.83s
+[Epoch 17] Train acc: 0.994, loss: 0.021 | Test acc: 0.987, loss: 0.062 | Time: 1.88s
+[Epoch 18] Train acc: 0.995, loss: 0.019 | Test acc: 0.987, loss: 0.057 | Time: 1.91s
+[Epoch 19] Train acc: 0.994, loss: 0.022 | Test acc: 0.987, loss: 0.056 | Time: 1.94s
+[Epoch 20] Train acc: 0.991, loss: 0.032 | Test acc: 0.985, loss: 0.084 | Time: 1.92s
+[Epoch 21] Train acc: 0.998, loss: 0.007 | Test acc: 0.990, loss: 0.045 | Time: 1.92s
+[Epoch 22] Train acc: 0.995, loss: 0.021 | Test acc: 0.988, loss: 0.057 | Time: 1.92s
+[Epoch 23] Train acc: 0.997, loss: 0.009 | Test acc: 0.989, loss: 0.048 | Time: 1.89s
+[Epoch 24] Train acc: 0.996, loss: 0.014 | Test acc: 0.989, loss: 0.056 | Time: 1.91s
+[Epoch 25] Train acc: 0.998, loss: 0.005 | Test acc: 0.991, loss: 0.045 | Time: 2.04s
+[Epoch 26] Train acc: 0.997, loss: 0.009 | Test acc: 0.989, loss: 0.051 | Time: 1.94s
+[Epoch 27] Train acc: 0.998, loss: 0.004 | Test acc: 0.992, loss: 0.043 | Time: 1.93s
+[Epoch 28] Train acc: 0.997, loss: 0.011 | Test acc: 0.990, loss: 0.058 | Time: 1.91s
+[Epoch 29] Train acc: 0.999, loss: 0.005 | Test acc: 0.991, loss: 0.045 | Time: 1.94s
+[Epoch 30] Train acc: 0.999, loss: 0.004 | Test acc: 0.992, loss: 0.042 | Time: 1.94s
+[Epoch 31] Train acc: 0.999, loss: 0.003 | Test acc: 0.992, loss: 0.041 | Time: 4.37s
+[Epoch 32] Train acc: 0.997, loss: 0.020 | Test acc: 0.991, loss: 0.058 | Time: 1.88s
+[Epoch 33] Train acc: 0.998, loss: 0.008 | Test acc: 0.990, loss: 0.050 | Time: 1.92s
+[Epoch 34] Train acc: 0.997, loss: 0.012 | Test acc: 0.990, loss: 0.063 | Time: 4.35s
+[Epoch 35] Train acc: 0.998, loss: 0.006 | Test acc: 0.990, loss: 0.060 | Time: 1.90s
+[Epoch 36] Train acc: 0.999, loss: 0.004 | Test acc: 0.991, loss: 0.053 | Time: 1.89s
+[Epoch 37] Train acc: 0.994, loss: 0.025 | Test acc: 0.988, loss: 0.064 | Time: 4.54s
+[Epoch 38] Train acc: 0.999, loss: 0.004 | Test acc: 0.991, loss: 0.047 | Time: 1.88s
+[Epoch 39] Train acc: 1.000, loss: 0.001 | Test acc: 0.992, loss: 0.042 | Time: 1.88s
+[Epoch 40] Train acc: 0.999, loss: 0.004 | Test acc: 0.991, loss: 0.050 | Time: 4.38s
+[Epoch 41] Train acc: 0.999, loss: 0.004 | Test acc: 0.991, loss: 0.050 | Time: 1.87s
+
+Early stopping triggered at epoch 41. Best epoch was 31
+Total training time: 114.66s
+
+Evaluating final test accuracy:
+Final Model Accuracy: 0.9924 | Loss: 0.0401
+EMA Model Accuracy:   0.9802 | Loss: 0.3791
+SWA Model Accuracy:   0.9929 | Loss: 0.0378
+Checkpoint is written to results/checkpoints/mnist/adamw_resnet18_mnist_pretrained.msgpack

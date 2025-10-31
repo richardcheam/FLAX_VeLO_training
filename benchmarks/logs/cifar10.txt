@@ -1,0 +1,49 @@
+Using: [CudaDevice(id=0)]
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/Adam.learning_rate = 0.0003
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/build_gradient_estimators.gradient_estimator_fn = @FullESOrPMAP
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/build_gradient_estimators.sample_task_family_fn = @april28_distribution_bigger
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/FullES.loss_type = 'last_recompute'
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/FullES.recompute_samples = 100
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/FullES.sign_delta_loss_scalar = 1.0
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/FullES.truncation_schedule = @LogUniformLengthSchedule()
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/gradient_worker_compute.extra_metrics = False
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/GradientAccumulator.num_average = 20
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/GradientAccumulator.opt = @Adam()
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/GradientClipOptimizer.opt = @GradientAccumulator()
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/GradientLearner.init_theta_from_path =     'jul18_continue_on_bigger_2xbs_morestale_9264/params'
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/GradientLearner.meta_init = @HyperV2()
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/GradientLearner.reset_outer_iteration = True
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/GradientLearner.theta_opt = @GradientClipOptimizer()
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/HyperV2.lstm_hidden_size = 512
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/HyperV2.param_inits = 256
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/HyperV2.use_bugged_loss_features = False
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/LogUniformLengthSchedule.max_length = 200000
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/LogUniformLengthSchedule.min_length = 200
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/periodically_save_checkpoint.time_interval = 60
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/PMAPFullES.truncation_schedule = @LogUniformLengthSchedule()
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/run_train.lopt = @HyperV2()
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/run_train.num_estimators = 8
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/run_train.num_steps = 100000
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/run_train.outer_learner_fn = @GradientLearner
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/run_train.run_num_estimators_per_gradient = 1
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/run_train.staleness = 500
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/run_train.stochastic_resample_frequency = 200
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/run_train.summary_every_n = 25
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/run_train.trainer_batch_size = 512
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/VectorizedLOptTruncatedStep.num_tasks = 8
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/VectorizedLOptTruncatedStep.random_initial_iteration_offset = 0
+opt_from_checkpoint__024840a1_9071_4f10_a58a_7c33ccfd531a/VectorizedLOptTruncatedStep.trunc_sched = @NeverEndingTruncationSchedule()
+
+number of parameters for resnet18: 11181642
+
+Training 194 steps over 2 epochs
+[Epoch 1] Train acc: 0.406, loss: 1.696 | Test acc: 0.401, loss: 1.718 | Time: 156.58s
+[Epoch 2] Train acc: 0.748, loss: 0.714 | Test acc: 0.718, loss: 0.791 | Time: 29.34s
+Total training time: 264.75s
+Checkpoint is written to results/checkpoints/cifar10/velo_resnet18_cifar10_pretrained.msgpack
+###################################################################################################
+
+
+number of parameters for resnet18: 11181642
+
+Training 194 steps over 2 epochs
